@@ -8,10 +8,10 @@ references:
 
 
   restore_deps: &restore_deps
-  restore_cache:
-    keys:
-      - v1-dependencies-{{ checksum "package.json" }}
-      - v1-dependencies-
+    restore_cache:
+      keys:
+        - v1-dependencies-{{ checksum "package.json" }}
+        - v1-dependencies-
 
   restore_git: &restore_git
     restore_cache:
