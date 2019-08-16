@@ -55,7 +55,7 @@ jobs:
   deploy:
     working_directory: ~/app
     docker:
-      - image: circleci/node:7.10
+      - image: circleci/node:8.7.0
     steps:
       - checkout
       - run:
