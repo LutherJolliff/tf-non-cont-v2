@@ -1,0 +1,9 @@
+branch-defaults:
+  master:
+    environment: $CIRCLE_BRANCH-tf-non-container-v2
+global:
+  application_name: tf-non-container-v2
+  default_ec2_keyname: AWS EC2
+  default_platform: 64bit Amazon Linux 2018.03 v4.9.2 running Node.js
+  default_region: us-east-1
+  sc: git
