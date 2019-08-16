@@ -55,7 +55,7 @@ jobs:
   deploy:
     working_directory: ~/app
     docker:
-      - image: circleci/node:8.7.0
+      - image: gradientco/node-elastic-beanstalk:10.12.0
     steps:
       - checkout
       - run:
