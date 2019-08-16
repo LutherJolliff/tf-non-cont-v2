@@ -59,6 +59,15 @@ jobs:
     steps:
       - checkout
       - run:
+          name: AWS Dep 
+          command: |
+            sudo apt update
+            sudo apt install -y python-pip python-dev
+      - run:
+          name: AWS Dep 2
+          command: |
+            sudo pip install awsebcli
+      - run:
           name: Deploying
           command: eb deploy $CIRCLE_BRANCH-my-application
 
