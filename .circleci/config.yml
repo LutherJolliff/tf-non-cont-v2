@@ -43,15 +43,15 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-  lint:
-    docker:
-      - image: circleci/node:7.10
-    steps:
-      - <<: *restore_git
-      - <<: *restore_deps
-      - run:
-          name: Lint
-          command: npm run lint
+  # lint:
+  #   docker:
+  #     - image: circleci/node:7.10
+  #   steps:
+  #     - <<: *restore_git
+  #     - <<: *restore_deps
+  #     - run:
+  #         name: Lint
+  #         command: npm run lint
   deploy:
     working_directory: ~/app
     docker:
@@ -70,12 +70,12 @@ workflows:
       - install-deps:
           requires:
             - checkout-code
-      - lint:
-          requires:
-            - install-deps
+      # - lint:
+      #     requires:
+      #       - install-deps
       - deploy:
           requires:
-            - lint
+            - install-deps
           filters:
             branches:
               only:
