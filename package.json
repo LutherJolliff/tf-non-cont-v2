@@ -1,0 +1,22 @@
+{
+  "name": "node-elastic-beanstalk",
+  "version": "1.0.0",
+  "description": "A sample node.js project for deployment on AWS Elastic Beanstalk",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidtucker/node-elastic-beanstalk.git"
+  },
+  "author": "David Tucker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidtucker/node-elastic-beanstalk/issues"
+  },
+  "homepage": "https://github.com/davidtucker/node-elastic-beanstalk#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
