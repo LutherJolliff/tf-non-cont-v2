@@ -1,6 +1,6 @@
 branch-defaults:
   master:
-    environment: $CIRCLE_BRANCH-tf-non-container-v2
+    environment: $CIRCLE_BRANCH
 global:
   application_name: tf-non-container-v2
   default_ec2_keyname: AWS EC2
