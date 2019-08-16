@@ -52,6 +52,18 @@ jobs:
   #     - run:
   #         name: Lint
   #         command: npm run lint
+  terraform:
+    docker:
+      - image: hashicorp/terraform:light
+    steps:
+      - checkout
+      - run:
+          name: Init 
+          command: terraform/terraform init 
+      - run:
+          name: Apply
+          command: terraform/terraform apply -auto-approve
+
   deploy:
     working_directory: ~/app
     docker:
@@ -83,9 +95,12 @@ workflows:
       # - lint:
       #     requires:
       #       - install-deps
-      - deploy:
+      - terraform:
           requires:
             - install-deps
+      - deploy:
+          requires:
+            - terraform
           filters:
             branches:
               only:
