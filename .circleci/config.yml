@@ -54,7 +54,7 @@ jobs:
   #         command: npm run lint
   terraform:
     docker:
-      - image: hashicorp/terraform:light
+      - image: luther007/cynerge_images:latest
     steps:
       - checkout
       - run:
