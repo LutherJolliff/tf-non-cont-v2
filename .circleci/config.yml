@@ -68,6 +68,9 @@ jobs:
           command: |
             sudo pip install awsebcli
       - run:
+          name: Init EB
+          command: eb init
+      - run:
           name: Deploying
           command: eb deploy $CIRCLE_BRANCH-my-application
 
