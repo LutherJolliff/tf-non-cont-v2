@@ -6,7 +6,7 @@ variable "profile" {
     default = "default"
 }
 
-variable "eb-app-name" {
+variable "app" {
   default = "tf-non-container-v2"
 }
 

@@ -1,5 +1,5 @@
 resource "aws_elastic_beanstalk_application" "elastic-bean-app" {
-  name        = "${var.eb-app-name}"
+  name        = "${var.app}"
   description = ""
 }
 
