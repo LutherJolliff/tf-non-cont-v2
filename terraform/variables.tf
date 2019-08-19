@@ -11,5 +11,5 @@ variable "eb-app-name" {
 }
 
 variable "env" {
-  default = "cat"
+  default = "cats"
 }
