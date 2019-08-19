@@ -10,6 +10,4 @@ variable "eb-app-name" {
   default = "tf-non-container-v2"
 }
 
-variable "env" {
-  default = "cats"
-}
+variable "env" {}
