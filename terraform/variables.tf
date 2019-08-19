@@ -10,6 +10,6 @@ variable "eb-app-name" {
   default = "tf-non-container-v2"
 }
 
-variable "eb-env-name" {
+variable "env" {
   type = "string"
 }
