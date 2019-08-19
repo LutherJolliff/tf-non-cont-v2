@@ -5,7 +5,7 @@ references:
     run:
       name: Set Environment Variables
       command: |
-        export TF_VAR_env=$CIRCLE_BRANCH
+        echo 'export TF_VAR_env=$CIRCLE_BRANCH' >> ${BASH_ENV}
 
   restore_deps: &restore_deps
     restore_cache:
@@ -61,6 +61,9 @@ jobs:
       - run:
           name: Init 
           command: cd terraform/ && terraform init 
+      - run:
+          name: Environment
+          command: printenv
       - run:
           name: Apply
           command: cd terraform/ && terraform apply -auto-approve
