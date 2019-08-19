@@ -9,3 +9,7 @@ variable "profile" {
 variable "eb-app-name" {
   default = "tf-non-container-v2"
 }
+
+variable "env" {
+  default = "cat"
+}
