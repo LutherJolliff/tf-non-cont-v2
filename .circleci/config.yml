@@ -59,10 +59,10 @@ jobs:
       - checkout
       - run:
           name: Init 
-          command: terraform/terraform init 
+          command: cd terraform/ && terraform init 
       - run:
           name: Apply
-          command: terraform/terraform apply -auto-approve
+          command: cd terraform/ && terraform apply -auto-approve
 
   deploy:
     working_directory: ~/app
