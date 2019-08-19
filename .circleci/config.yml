@@ -5,7 +5,7 @@ references:
     run:
       name: Set Environment Variables
       command: |
-        echo 'export TF_VAR_eb-env-name=$CIRCLE_BRANCH' >> ${BASH_ENV}
+        export TF_VAR_eb-env-name=$CIRCLE_BRANCH
 
   restore_deps: &restore_deps
     restore_cache:
