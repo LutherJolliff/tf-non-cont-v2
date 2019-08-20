@@ -78,9 +78,9 @@ jobs:
           name: AWS Dep 
           command: |
             sudo apt-get -y -qq update
-            sudo apt-get install python-pip python-dev build-essential
-            sudo pip install --upgrade setuptools
-            sudo pip install awsebcli --upgrade
+            sudo apt-get -y install python-pip python-dev build-essential
+            sudo yes | pip install --upgrade setuptools
+            sudo yes | pip install awsebcli --upgrade
       # - run:
       #     name: Init EB
       #     command: eb init
