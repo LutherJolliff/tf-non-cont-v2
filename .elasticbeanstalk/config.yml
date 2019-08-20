@@ -5,5 +5,5 @@ global:
   application_name: $APP_NAME
   default_ec2_keyname: $EC2_KEY
   default_platform: $NODE_TYPE
-  default_region: ${AWS_DEFAULT_REGION}
+  default_region: us-east-1
   sc: git
