@@ -65,9 +65,6 @@ jobs:
           name: Init 
           command: cd terraform/ && terraform init 
       - run:
-          name: Environment
-          command: printenv
-      - run:
           name: Apply
           command: cd terraform/ && terraform apply -auto-approve
 
@@ -87,6 +84,10 @@ jobs:
       # - run:
       #     name: Init EB
       #     command: eb init
+      - run:
+          name: Environment
+          command: printenv
+
       - run:
           name: Deploying
           command: eb deploy $CIRCLE_BRANCH
