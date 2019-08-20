@@ -91,6 +91,9 @@ jobs:
       - run:
           name: Deploying
           command: eb deploy $CIRCLE_BRANCH
+      - run:
+          name: Environment URL
+          command: aws elasticbeanstalk describe-environments --environment-names $CIRCLE_BRANCH --query "Environments[*].CNAME" --output text
 
 workflows:
   version: 2
