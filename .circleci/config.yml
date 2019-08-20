@@ -6,6 +6,8 @@ references:
       name: Set Environment Variables
       command: |
         echo 'export TF_VAR_env=$CIRCLE_BRANCH' >> ${BASH_ENV}
+        echo 'export TF_VAR_app=$APP_NAME' >> ${BASH_ENV}
+        echo 'export TF_VAR_node_type=$NODE_TYPE' >> ${BASH_ENV}
 
   restore_deps: &restore_deps
     restore_cache:

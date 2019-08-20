@@ -11,3 +11,5 @@ variable "app" {
 }
 
 variable "env" {}
+
+variable "node_type" {}
